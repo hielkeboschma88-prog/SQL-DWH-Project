@@ -1,0 +1,27 @@
+/* Dit script maakt een nieuwe database. 
+Eerst wordt een oude versie gezocht en indien aanwezig wordt deze verwijderd.
+Daarna wordt de nieuwe DB aangemaakt.
+Tot slot worden er 3 schema's gemaakt omdat er in verschillende datalagen wordt gewerkt. */
+
+USE master;
+GO
+
+-- Check op oude versie. Oude eerst verwijderen en dan de nieuwe maken als er al één is.
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DWH')
+	BEGIN
+		DROP DATABASE DWH;
+	END;
+GO
+
+-- Hier wordt de DB gemaakt
+CREATE DATABASE DWH;
+GO
+
+/* Hier worden de schema's aangemaakt. */
+USE DWH;
+GO
+CREATE SCHEMA bronze;
+GO
+CREATE SCHEMA silver;
+GO
+CREATE SCHEMA gold;

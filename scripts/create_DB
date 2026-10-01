@@ -1,7 +1,10 @@
-/* Dit script maakt een nieuwe database. 
-Eerst wordt een oude versie gezocht en indien aanwezig wordt deze verwijderd.
-Daarna wordt de nieuwe DB aangemaakt.
-Tot slot worden er 3 schema's gemaakt omdat er in verschillende datalagen wordt gewerkt. */
+/* 
+Doel van dit script:
+	Dit script maakt een nieuwe database. 
+	Eerst wordt een oude versie gezocht en indien aanwezig wordt deze verwijderd.
+	Daarna wordt de nieuwe DB aangemaakt.
+	Tot slot worden er 3 schema's bronze, silver en gold gemaakt omdat er in verschillende datalagen wordt gewerkt. 
+*/
 
 USE master;
 GO

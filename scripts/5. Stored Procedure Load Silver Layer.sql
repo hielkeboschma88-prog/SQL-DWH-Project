@@ -171,8 +171,8 @@ BEGIN
 		)
 		SELECT 
 		-- Kolommen sls_prd_key en sls_ord_num as is overnemen.
-			sls_prd_key,
 			sls_ord_num,
+			sls_prd_key,
 			sls_cust_id,
 		-- NULLS afhandelen en INT naar DATE casten. Ik doe dit voor alle date kolommen ook al is het nu niet nodig. Toekomstproof.
 			CASE
